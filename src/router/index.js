@@ -11,6 +11,12 @@ const routes = [
   {
     path: '/documents',
     name: 'documents',component: () => import(/* webpackChunkName: "about" */ '../views/DocumentsListView.vue')
+  },
+  {
+    path:'/:pathMatch(.*)*',
+    name: 'redirectPage',
+    component: () => import(/* webpackChunkName: "about" */ '../views/LoginView.vue')
+  
   }
 ]
 
