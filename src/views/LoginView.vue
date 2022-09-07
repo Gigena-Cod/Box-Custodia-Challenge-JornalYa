@@ -16,10 +16,10 @@
                 <form @submit.prevent="login" method="post" class=" px-10 ">
                     <div class="flex flex-col text-gray-400 username__container">
                         <label for="username" class="mb-2 text-left">Usuario</label>
-                        <input v-model="user.userName" class="border rounded h-9 px-2 " type="text" id="username" placeholder="Ingresá tu usuario" name="username">
+                        <input maxlength="35" v-model="user.userName" class="border rounded h-9 px-2 " type="text" id="username" placeholder="Ingresá tu usuario" name="username">
                     </div>
                     <div class="flex flex-col mt-2 text-gray-400 password__container">
-                        <input v-model="user.password" class="border rounded h-9 px-2 " type="password" id="password" placeholder="Ingresá tu contraseña" name="password">
+                        <input maxlength="40" v-model="user.password" class="border rounded h-9 px-2 " type="password" id="password" placeholder="Ingresá tu contraseña" name="password">
                     </div>
                      <div v-if="error" class="my-4 error text-red-500">
                         Usuario y/o contraseña incorrecta
