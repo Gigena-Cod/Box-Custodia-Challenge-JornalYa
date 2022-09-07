@@ -21,8 +21,13 @@
                     <div class="flex flex-col mt-2 text-gray-400 password__container">
                         <input v-model="user.password" class="border rounded h-9 px-2 " type="password" id="password" placeholder="Ingresá tu contraseña" name="password">
                     </div>
+                     <div v-if="error" class="my-4 error text-red-500">
+                        Usuario y/o contraseña incorrecta
+                    </div>
                     <input type="submit" class="w-full cursor-pointer flex items-center justify-center rounded hover:shadow mt-8 hover:bg-gray-300 h-12 bg-gray-200 text-gray-500 font-semibold" value="INGRESAR">
+                
                 </form>
+               
                 <!-- PASSWORD  -->
                 <a href="#" class="my-4 text-blue-500 hover:text-blue-600  px-10  forgot">
                     Olvide mi contraseña
@@ -57,7 +62,8 @@ export default {
             user:{
                 userName:'',
                 password:''
-            }
+            },
+            error:false
         }
     },
      mounted(){
@@ -69,12 +75,14 @@ export default {
         ]),
         async login(){
             let JWT= await  Request.POST__login(this.user)
-            await console.log(JWT)
             if(JWT){
                 localStorage.setItem("token", JWT);
                 this.$router.replace({ name: 'documents' }) 
-                this.toogleShow()
+                this.toogleShow();
+                this.error=false;
                 
+            }else{
+                this.error=true;
             }
             
         },
