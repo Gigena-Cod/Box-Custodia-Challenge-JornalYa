@@ -16,7 +16,7 @@ Primero, te presentamos las vistas de las pantallas que tenés que hacer:
 2. Listado de documentos
 3. Visualizacion de un documento
 
-## Te pedimos:
+## Te pedimos
 ● En base a los diseños dados, construir las siguientes 3 vistas:
     o Log in
     o Listado de documentos
@@ -44,5 +44,5 @@ npm install
 npm run serve
 ```
 
-### [Web](https://jemersoft-challenge.onrender.com/#/)  [Linkedin](https://www.linkedin.com/in/gigena-christian/)
+### [Web](https://box-custodia-challenge-jornalya.onrender.com)  [Linkedin](https://www.linkedin.com/in/gigena-christian/)
 
