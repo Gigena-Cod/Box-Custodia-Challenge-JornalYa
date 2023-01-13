@@ -1,5 +1,5 @@
 <template>
-    <div id="login" class="flex items-center  w-full h-custom bg-custom ">       
+    <div id="login" class="flex items-center w-full h-custom bg-custom ">       
         
         <div class="mx-auto w-full max-w-7xl container">            
              <div class="flex mx-auto md:mx-0 flex-col pt-10 w-form bg-white border rounded-xl shadow-xl formulario">
@@ -109,8 +109,7 @@ export default {
 }
 
 .h-custom{
-    height: 100vh;
-max-height: 41rem;
+    min-height: calc( 100vh - 81px)
 }
 
 </style>
