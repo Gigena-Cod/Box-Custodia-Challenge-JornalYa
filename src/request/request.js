@@ -1,4 +1,4 @@
-let URL_API="https://sbox-dev.boxcustodia.com/api-test"
+let URL_API=process.env.VUE_APP_URL_API
 import axios from 'axios';
 
 
